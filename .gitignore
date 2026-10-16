@@ -1,55 +1,20 @@
-# Prerequisites
-*.d
+# Personal settings and data: the settings hold the access code and passwords.
+database/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Data downloaded or created while the program runs.
+images/
+peanut.log*
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Recordings saved next to the program. The sounds shipped in data/ (such
+# as data/alarm.wav) are part of the program and stay in the repository.
+/*.wav
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# debug information files
-*.dwo
+# Python and tools.
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+release/

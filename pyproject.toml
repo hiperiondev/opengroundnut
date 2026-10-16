@@ -1,0 +1,23 @@
+# Tool settings for OpenGroundnut. The program itself is started with
+# opengroundnut.py and needs no installation; see README.md.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+# The modules of src/ run in one shared namespace (see README.md,
+# "Architecture"), so names defined in another module look undefined to a
+# linter that reads one file at a time; tools/lint_shared_namespace.py lints
+# them joined in load order.
+extend-exclude = ["build", "dist", "release", ".venv"]
+
+[tool.ruff.lint]
+select = ["E9", "F", "B", "PLE"]
+ignore = [
+    "F403",  # the language files are imported with "*" on purpose
+    "F405",
+    "F811",  # each module imports what it uses, even when another one did already
+    "B905",  # zip() pairs lists of the same length; Python 3.9 has no strict=
+]

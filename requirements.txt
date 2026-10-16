@@ -1,0 +1,16 @@
+# Python packages needed by OpenGroundnut (Python 3.9 or newer; on Windows
+# 3.9 to 3.13, the versions PyAudio publishes ready-made packages for).
+#   python -m pip install -r requirements.txt
+#
+# The version ranges are the ones the program is written for. The window is
+# built with CustomTkinter 5.2, whose scaling and widget options change
+# between major versions.
+aprslib>=0.7,<0.8
+beautifulsoup4>=4.11,<5
+customtkinter>=5.2,<5.3
+Pillow>=10.0
+PyAudio>=0.2.14,<0.3
+pyserial>=3.5,<4
+requests>=2.28,<3
+tinydb>=4.8,<5
+xmltodict>=0.13,<1
